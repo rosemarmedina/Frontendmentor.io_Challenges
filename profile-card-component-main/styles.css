@@ -1,0 +1,131 @@
+:root{
+    --Dark_cyan: hsl(185, 75%, 39%);
+    --dark_desaturated_blue: hsl(229, 23%, 23%);
+    --Dark_grayish_blue: hsl(227, 10%, 46%);
+    --Dark_gray: hsl(0, 0%, 59%);
+    --white: #fff;
+    
+    --font_400: 400;
+    --font_700: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* for background images in body */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    height: 100vh;
+    background-color: var(--Dark_cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top -45rem left -40rem, bottom -45rem right -40rem;
+    position: relative;
+}
+
+.attribution{
+    position: absolute;
+    bottom: 1rem;
+}
+
+.box {
+    background-color: var(--white);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.profile {
+    position: absolute;
+    top: 90px;
+    left: 36.5%;
+}
+
+.profile img {
+    border: 5px solid var(--white);
+    border-radius: 50%;
+}
+
+.info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.1px solid var(--Dark_gray);
+    margin-top: 4rem;
+}
+
+.user_info {
+    justify-content: center;
+}
+
+.user_info #user_name, .amount {
+    color: var(--dark_desaturated_blue);
+    font-weight: var(--font_700);
+}
+
+.user_info #user_age {
+    font-weight: var(--font_400);
+    margin-left: 5px;
+    color: var(--Dark_grayish_blue);
+}
+
+#city {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    color: var(--Dark_gray);
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;  
+    padding: 1.5rem;
+}
+
+.description{
+    font-size: 0.8rem;
+    letter-spacing: 3.3px;
+    color: var(--Dark_gray);
+    margin-top: 8px;
+}
+
+.followers p[class="description"] {
+    letter-spacing: 0.1rem;
+}
+
+/* for mobile*/
+@media only screen and (max-width: 375px) {
+    body{
+        background-position: top -45rem left -40rem, bottom -45rem right -40rem;
+        background-size: 60rem 62rem,62rem 62rem;
+    }
+
+    .box{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    body{
+        background-size: 85rem 70rem;
+    }
+}
+
